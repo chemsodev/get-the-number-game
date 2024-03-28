@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Digital';
+    src: url('../asset/digital.ttf') format('truetype');
+}
+*{
+    box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+} 
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 44, 44);
+}
+
+#container{
+    height: 45vw;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(0, 42, 255);
+    border-radius: 2vw;
+    border:solid 0.5vw rgb(255, 55, 0) ;
+
+}
+
+#btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#second{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+button {
+    background-color: rgb(255, 55, 0);
+    border: solid 0.2vw rgb(50, 50, 50);
+    border-radius: 1.5vw;
+    font-weight:bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7vw;
+    width: 9.1vw;
+    height: 4vw;
+}
+button:hover{
+    background-color:rgba(190, 41, 0, 0.931);
+}
+#count,#goal{
+    font-size: 12vw;
+    font-family:'Digital';
+       margin-bottom: 5vw;
+}
+#timer{
+    border-radius: 2vw;
+    border:solid 0.5vw rgb(255, 55, 0) ;
+    background-color: rgb(6, 6, 173);
+    width: 25vw;
+    height: 10vw; 
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#first{
+    width: 100%;
+
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column:1/3;
+    grid-row: 1;
+}
+h3{
+    margin-bottom: 1vw;
+    font-size: 3vw;
+    margin-top: 1vw;
+}
+h4{
+    margin-bottom: 1vw;
+    margin-top: 0;
+    font-size: 3vw;
+}
+#time{
+    font-size: 5vw;                                                                                        
+    font-family:'Digital';
+    color: white;  
+    text-shadow: 0.2vw 0vw 1vw rgba(255, 255, 255, 0.5);
+}
+#third{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;  
+    padding-right: 2vw;
+}
