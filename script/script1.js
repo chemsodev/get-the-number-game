@@ -79,6 +79,7 @@ replay.onmousedown = function() {
 replay.onmouseup = function () {
   replay.style.width = "9vw";
   replay.style.height = "4vw";
+  enableAllButtons();
   resetCountdown();
 };
 
@@ -109,21 +110,19 @@ function enableAllButtons() {
 
 function updateCountdown() {
 
-  if (countDown <= 0) {
+  if (countDown == 0) {
 
-    time.textContent = "You Lost";
+    timer.textContent = "You Lost";
 
-    time.style.fontSize = "6vw";
+    timer.style.fontSize = "6vw";
 
     disableAllButtons();
 
   } else if (win) {
 
-    time.textContent = "You Won";
+    timer.textContent = "You Won";
 
-    time.style.fontSize = "6vw";
-
-    enableAllButtons();
+    timer.style.fontSize = "6vw";
 
   } else {
 
