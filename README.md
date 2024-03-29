@@ -3,9 +3,8 @@ This is my 2nd mini project using js it's  a game that gives you a random number
 
 U can see the website [here](https://chemsodev.github.io/get-the-number-game/).
 # Overview
-## Screenshot
-![website screenshoot](image1.png?raw=true "screenshoot")
-![website screenshoot](image.png?raw=true "screenshoot")
+## Screenshots
+![website screenshoot](image1.png?raw=true "screenshoot")![website screenshoot](image.png?raw=true "screenshoot")
 # My process
 ## Built with
 
