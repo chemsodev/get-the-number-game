@@ -8,6 +8,7 @@ const replay = document.getElementById("replay");
 const goal = document.getElementById("goal");
 const countlabel = document.getElementById("count");
 const timer = document.getElementById("time");
+const buttons = [reset, increase, decrease];
 const initialTimeHtml = `<div id="time">
 
            <span id="seconds">00</span>
@@ -91,19 +92,47 @@ function initializeCountdown() {
     updateCountdown
   };
 }
+function disableAllButtons() {
+  buttons.forEach((button) => {
+      button.classList.add("unclickable");
+  });
+
+}
+
+
+function enableAllButtons() {
+  buttons.forEach((button) => {
+    button.classList.remove("unclickable");
+  });
+}
+
 
 function updateCountdown() {
-  if (countDown<= 0) {
-    timer.textContent="You Lost";
-    timer.style.fontSize = "6vw";
-  } else if(win){
-    timer.textContent="You Won";
-    timer.style.fontSize = "6vw";
-  }else{
+
+  if (countDown <= 0) {
+
+    time.textContent = "You Lost";
+
+    time.style.fontSize = "6vw";
+
+    disableAllButtons();
+
+  } else if (win) {
+
+    time.textContent = "You Won";
+
+    time.style.fontSize = "6vw";
+
+    enableAllButtons();
+
+  } else {
+
     countDown--;
+
+    updateCountLabel();
+
   }
 
-  updateCountLabel();
 }
 
 function updateCountLabel() {
