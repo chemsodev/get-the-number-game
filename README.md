@@ -1,5 +1,5 @@
 # Chemso - QR-code-component
-This is my first mini project using js it's basically a counter i tried to use things that i learned recently.
+This is my 2nd mini project using js it's  a game that gives you a random number and you try to achieve it by increasing and decreasing a number before the time ends, i tried to use things that i learned recently.
 
 U can see the website [here](https://chemsodev.github.io/get-the-number-game/).
 # Overview
