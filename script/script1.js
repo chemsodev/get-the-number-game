@@ -1,12 +1,12 @@
-const short=10;
-const medium=14;
-const long=18
+const short=12;
+const medium=17;
+const long=25
 const reset = document.getElementById("reset");
 const increase = document.getElementById("increase");
 const decrease = document.getElementById("decrease");
 const replay = document.getElementById("replay");
 const goal = document.getElementById("goal");
-const countlabel = document.getElementById("count");
+const countLabel = document.getElementById("count");
 const timer = document.getElementById("time");
 const buttons = [reset, increase, decrease];
 const initialTimeHtml = `<div id="time">
@@ -14,19 +14,16 @@ const initialTimeHtml = `<div id="time">
            <span id="seconds">00</span>
 
         </div>`;
-const htmlElements = {
-  countLabel: countlabel
-};
 
 let count = 0;
 let num = 0;
-let max = 250;
-let min = -250;
+let max = 150;
+let min = -150;
 var win=false;
 var countDown;
 reset.onmousedown = function () {
   count = 0;
-  countlabel.textContent = count;
+  countLabel.textContent = count;
   reset.style.width = "9.3vw";
   reset.style.height = "4.3vw";
 };
@@ -40,7 +37,7 @@ increase.onmousedown = function () {
   increase.style.width = "9.3vw";
   increase.style.height = "4.3vw";
   count++;
-  countlabel.textContent = count;
+  countLabel.textContent = count;
   if (count==num){
     win=true;
   }
@@ -53,7 +50,7 @@ increase.onmouseup = function () {
 
 decrease.onmousedown = function () {
   count--;
-  countlabel.textContent = count;
+  countLabel.textContent = count;
   if (count==num){
     win=true;
   }
@@ -70,7 +67,7 @@ replay.onmousedown = function() {
   num = Math.floor(Math.random() * (max - min)) + min;
   goal.textContent = num;
   count = 0;
-  countlabel.textContent = count;
+  countLabel.textContent = count;
   win=false;
   replay.style.width = "9.3vw";
   replay.style.height = "4.3vw";
@@ -155,11 +152,11 @@ function resetCountdown() {
 }
 num = Math.floor(Math.random() * (max - min)) + min;
 if (num<50 &&num>-50) {
-   countDown = 5;
+   countDown = short;
 }else if(num<100 &&num>-100){
-  countDown=7;
+  countDown=medium;
 }else{
-  countDown=15;
+  countDown=long;
 }
 goal.textContent = num;
 initializeCountdown();
