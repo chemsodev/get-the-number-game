@@ -17,8 +17,8 @@ const initialTimeHtml = `<div id="time">
 
 let count = 0;
 let num = 0;
-let max = 150;
-let min = -150;
+let max = 1500;
+let min = -100;
 var win=false;
 var countDown;
 reset.onmousedown = function () {
@@ -151,9 +151,9 @@ function resetCountdown() {
   updateCountLabel();
 }
 num = Math.floor(Math.random() * (max - min)) + min;
-if (num<50 &&num>-50) {
+if (num<25 &&num>-25) {
    countDown = short;
-}else if(num<100 &&num>-100){
+}else if(num<50 &&num>-50){
   countDown=medium;
 }else{
   countDown=long;
